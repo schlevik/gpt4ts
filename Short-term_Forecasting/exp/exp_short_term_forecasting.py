@@ -1,3 +1,4 @@
+import json
 from data_provider.data_factory import data_provider
 from data_provider.m4 import M4Meta
 from exp.exp_basic import Exp_Basic
@@ -230,6 +231,13 @@ class Exp_Short_Term_Forecast(Exp_Basic):
             print('mape:', mape)
             print('mase:', mase)
             print('owa:', owa_results)
+            with open(os.path.join(file_path, 'results.json'), 'w+') as f:
+                json.dump({
+                    'smape': smape_results,
+                    'mape': mape,
+                    'mase': mase,
+                    'owa': owa_results
+                }, f)
         else:
             print('After all 6 tasks are finished, you can calculate the averaged index')
         return

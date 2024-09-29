@@ -1,5 +1,5 @@
 model_name=GPT4TS
-for percent_aug in -50 -25 -10 25 50 100; do # 
+for percent_aug in -50 -25 -10; do # 
   python -u run.py \
     --task_name short_term_forecast \
     --is_training 1 \
