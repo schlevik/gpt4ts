@@ -205,7 +205,7 @@ class Exp_Short_Term_Forecast(Exp_Basic):
         print('test shape:', preds.shape)
 
         # result save
-        folder_path = './m4_results/' + self.args.model + '/'
+        folder_path = './m4_results/' + self.args.model + str(self.args.percent_aug) + '/'
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
@@ -216,7 +216,7 @@ class Exp_Short_Term_Forecast(Exp_Basic):
         forecasts_df.to_csv(folder_path + self.args.seasonal_patterns + '_forecast.csv')
 
         print(self.args.model)
-        file_path = './m4_results/' + self.args.model + '/'
+        file_path = folder_path #'./m4_results/' + self.args.model + str(self.args.percent_aug) + '/'
         if 'Weekly_forecast.csv' in os.listdir(file_path) \
                 and 'Monthly_forecast.csv' in os.listdir(file_path) \
                 and 'Yearly_forecast.csv' in os.listdir(file_path) \

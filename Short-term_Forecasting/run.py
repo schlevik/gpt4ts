@@ -101,6 +101,10 @@ parser.add_argument('--mlp', type=int, default=0)
 parser.add_argument('--weight', type=float, default=0)
 parser.add_argument('--percent', type=int, default=5)
 
+parser.add_argument('--percent_aug', type=int, default=100)
+parser.add_argument('--aug', type=str, default=None)
+parser.add_argument('--aug_only', type=int, default=1)
+
 args = parser.parse_args()
 args.use_gpu = True if torch.cuda.is_available() and args.use_gpu else False
 

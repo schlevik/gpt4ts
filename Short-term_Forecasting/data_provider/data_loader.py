@@ -721,10 +721,16 @@ class Dataset_Custom(Dataset):
 class Dataset_M4(Dataset):
     def __init__(self, root_path, flag='pred', size=None,
                  features='S', data_path='ETTh1.csv',
+                 aug=None, aug_only=False, percent_aug=100,
                  target='OT', scale=False, inverse=False, timeenc=0, freq='15min',
                  seasonal_patterns='Yearly'):
         # size [seq_len, label_len, pred_len]
         # init
+        self.aug_only = aug_only
+        self.percent_aug = percent_aug
+        self.aug_path = aug
+
+
         self.features = features
         self.target = target
         self.scale = scale
@@ -755,11 +761,31 @@ class Dataset_M4(Dataset):
         self.ids = np.array([i for i in dataset.ids[dataset.groups == self.seasonal_patterns]])
         self.timeseries = [ts for ts in training_values]
 
+        # data aug stuff
+        if self.aug_path and self.flag == 'train':
+            self.aug = np.load(self.aug_path).squeeze()
+            print(self.percent_aug, len(self.timeseries))
+            if self.percent_aug > 0:
+                num_aug = int(self.percent_aug /100 * len(self.aug))
+            else:
+                num_aug = int(- self.percent_aug /100 * len(self.timeseries))
+            print(num_aug)
+            if num_aug < len(self.aug):
+                self.aug = self.aug[np.random.choice(len(self.aug), num_aug, replace=False)]
+            print(f"New dataset size: {len(self.aug)}")
+        else:
+            self.aug = None
+
     def __getitem__(self, index):
         insample = np.zeros((self.seq_len, 1))
         insample_mask = np.zeros((self.seq_len, 1))
         outsample = np.zeros((self.pred_len + self.label_len, 1))
         outsample_mask = np.zeros((self.pred_len + self.label_len, 1))  # m4 dataset
+        if index < len(self.timeseries):
+            sampled_timeseries = self.timeseries[index]
+        else:
+            index = index - len(self.timeseries)
+            sampled_timeseries = self.aug[index]
 
         sampled_timeseries = self.timeseries[index]
         cut_point = np.random.randint(low=max(1, len(sampled_timeseries) - self.window_sampling_limit),
@@ -776,7 +802,7 @@ class Dataset_M4(Dataset):
         return insample, outsample, insample_mask, outsample_mask
 
     def __len__(self):
-        return len(self.timeseries)
+        return len(self.timeseries) + (len(self.aug) if self.aug is not None else 0)
 
     def inverse_transform(self, data):
         return self.scaler.inverse_transform(data)
