@@ -787,7 +787,7 @@ class Dataset_M4(Dataset):
             index = index - len(self.timeseries)
             sampled_timeseries = self.aug[index]
 
-        sampled_timeseries = self.timeseries[index]
+        # sampled_timeseries = self.timeseries[index]
         cut_point = np.random.randint(low=max(1, len(sampled_timeseries) - self.window_sampling_limit),
                                       high=len(sampled_timeseries),
                                       size=1)[0]
