@@ -36,20 +36,38 @@ def data_provider(args, flag, drop_last_test=True, train_all=False):
         drop_last = True
         batch_size = args.batch_size
         freq = args.freq
-
-    data_set = Data(
-        root_path=args.root_path,
-        data_path=args.data_path,
-        flag=flag,
-        size=[args.seq_len, args.label_len, args.pred_len],
-        features=args.features,
-        target=args.target,
-        timeenc=timeenc,
-        freq=freq,
-        percent=percent,
-        max_len=max_len,
-        train_all=train_all
-    )
+    if args.aug:
+        print("Data aug...")
+        data_set = Data(
+            root_path=args.root_path,
+            data_path=args.data_path,
+            flag=flag,
+            size=[args.seq_len, args.label_len, args.pred_len],
+            features=args.features,
+            target=args.target,
+            timeenc=timeenc,
+            freq=freq,
+            percent=percent,
+            max_len=max_len,
+            train_all=train_all,
+            percent_aug=args.percent_aug,
+            aug=args.aug,
+            aug_only=args.aug_only
+        )
+    else:
+        data_set = Data(
+            root_path=args.root_path,
+            data_path=args.data_path,
+            flag=flag,
+            size=[args.seq_len, args.label_len, args.pred_len],
+            features=args.features,
+            target=args.target,
+            timeenc=timeenc,
+            freq=freq,
+            percent=percent,
+            max_len=max_len,
+            train_all=train_all
+        )
     print(flag, len(data_set))
     data_loader = DataLoader(
         data_set,

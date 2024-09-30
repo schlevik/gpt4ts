@@ -79,6 +79,9 @@ parser.add_argument('--itr', type=int, default=3)
 parser.add_argument('--cos', type=int, default=0)
 
 
+parser.add_argument('--percent_aug', type=int, default=100)
+parser.add_argument('--aug', type=str, default=None)
+parser.add_argument('--aug_only', type=int, default=1)
 
 args = parser.parse_args()
 
