@@ -10,3 +10,8 @@ Zero-shot_Learning/datasets
 *__pycache__*
 *.ipynb_checkpoints*
 */.DS_Store
+*.npy
+dataset
+*.tar.gz
+m4_results_old
+test_results

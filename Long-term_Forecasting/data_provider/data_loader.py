@@ -1,3 +1,4 @@
+import glob
 import os
 import numpy as np
 import pandas as pd
@@ -9,7 +10,6 @@ from utils.timefeatures import time_features
 from utils.tools import convert_tsf_to_dataframe
 import warnings
 from pathlib import Path
-import glob
 
 warnings.filterwarnings('ignore')
 
