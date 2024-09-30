@@ -206,7 +206,8 @@ class Exp_Short_Term_Forecast(Exp_Basic):
         print('test shape:', preds.shape)
 
         # result save
-        folder_path = './m4_results/' + self.args.model + str(self.args.percent_aug) + '/'
+        folder_path = f'./m4_results{"" if not self.args.aug_only else "_aug_only"}/' + self.args.model + '/'
+        # folder_path = './m4_results_/' + self.args.model + str(self.args.percent_aug) + '/'
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 

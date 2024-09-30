@@ -775,6 +775,8 @@ class Dataset_M4(Dataset):
             print(f"New dataset size: {len(self.aug)}")
         else:
             self.aug = None
+        self.ds_len = len(self.timeseries)
+        self.aug_num = len(self.aug) if self.aug is not None else 0
 
     def __getitem__(self, index):
         insample = np.zeros((self.seq_len, 1))
@@ -802,7 +804,10 @@ class Dataset_M4(Dataset):
         return insample, outsample, insample_mask, outsample_mask
 
     def __len__(self):
-        return len(self.timeseries) + (len(self.aug) if self.aug is not None else 0)
+        if self.flag != 'train':
+            return self.ds_len
+        else:
+            return (self.ds_len if not self.aug_only else 0) + self.aug_num
 
     def inverse_transform(self, data):
         return self.scaler.inverse_transform(data)

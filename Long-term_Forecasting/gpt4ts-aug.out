@@ -1,0 +1,1016 @@
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3843) from 3843
+3843 new ds
+256 146
+train 3843
+Data aug...
+0 146
+val 518
+Data aug...
+0 146
+test 1190
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 3.3005785942077637
+Epoch: 1, Steps: 240 | Train Loss: 0.2230171 Vali Loss: 0.3102515
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.310251).  Saving model ...
+Epoch: 2 cost time: 3.2973861694335938
+Epoch: 2, Steps: 240 | Train Loss: 0.1839992 Vali Loss: 0.3119813
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+EarlyStopping counter: 1 out of 3
+Epoch: 3 cost time: 2.923356771469116
+Epoch: 3, Steps: 240 | Train Loss: 0.1930851 Vali Loss: 0.2838367
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.310251 --> 0.283837).  Saving model ...
+Epoch: 4 cost time: 2.611356019973755
+Epoch: 4, Steps: 240 | Train Loss: 0.1534234 Vali Loss: 0.2966681
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 3.436225414276123
+Epoch: 5, Steps: 240 | Train Loss: 0.1730711 Vali Loss: 0.2846474
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 6 cost time: 3.1802287101745605
+Epoch: 6, Steps: 240 | Train Loss: 0.1685598 Vali Loss: 0.2738018
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+Validation loss decreased (0.283837 --> 0.273802).  Saving model ...
+Epoch: 7 cost time: 3.367896318435669
+Epoch: 7, Steps: 240 | Train Loss: 0.1538703 Vali Loss: 0.2818442
+lr_adjust = {7: 6.561e-05}
+Updating learning rate to 6.561e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 8 cost time: 3.0857901573181152
+Epoch: 8, Steps: 240 | Train Loss: 0.1386547 Vali Loss: 0.2795176
+lr_adjust = {8: 5.904900000000001e-05}
+Updating learning rate to 5.904900000000001e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 9 cost time: 2.4586668014526367
+Epoch: 9, Steps: 240 | Train Loss: 0.1378102 Vali Loss: 0.2503780
+lr_adjust = {9: 5.3144100000000005e-05}
+Updating learning rate to 5.3144100000000005e-05
+Validation loss decreased (0.273802 --> 0.250378).  Saving model ...
+Epoch: 10 cost time: 2.7510430812835693
+Epoch: 10, Steps: 240 | Train Loss: 0.1374498 Vali Loss: 0.2477362
+lr_adjust = {10: 4.782969000000001e-05}
+Updating learning rate to 4.782969000000001e-05
+Validation loss decreased (0.250378 --> 0.247736).  Saving model ...
+------------------------------------
+test shape: (74, 16, 24, 1) (74, 16, 24, 1)
+test shape: (1184, 24, 1) (1184, 24, 1)
+mae:0.9857, mse:2.1602, rmse:1.4697, smape:77.1701
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3843) from 3843
+3843 new ds
+256 146
+train 3843
+Data aug...
+0 146
+val 518
+Data aug...
+0 146
+test 1190
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 2.5548129081726074
+Epoch: 1, Steps: 240 | Train Loss: 0.2373740 Vali Loss: 0.2843360
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.284336).  Saving model ...
+Epoch: 2 cost time: 2.5106618404388428
+Epoch: 2, Steps: 240 | Train Loss: 0.1900951 Vali Loss: 0.3039059
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+EarlyStopping counter: 1 out of 3
+Epoch: 3 cost time: 3.3739542961120605
+Epoch: 3, Steps: 240 | Train Loss: 0.1945847 Vali Loss: 0.2970898
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+EarlyStopping counter: 2 out of 3
+Epoch: 4 cost time: 2.3879284858703613
+Epoch: 4, Steps: 240 | Train Loss: 0.1775130 Vali Loss: 0.2641799
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+Validation loss decreased (0.284336 --> 0.264180).  Saving model ...
+Epoch: 5 cost time: 2.562610626220703
+Epoch: 5, Steps: 240 | Train Loss: 0.1616947 Vali Loss: 0.3612002
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 6 cost time: 2.9991350173950195
+Epoch: 6, Steps: 240 | Train Loss: 0.1615559 Vali Loss: 0.3101161
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 7 cost time: 3.0367472171783447
+Epoch: 7, Steps: 240 | Train Loss: 0.1631150 Vali Loss: 0.2843814
+lr_adjust = {7: 6.561e-05}
+Updating learning rate to 6.561e-05
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+test shape: (74, 16, 24, 1) (74, 16, 24, 1)
+test shape: (1184, 24, 1) (1184, 24, 1)
+mae:1.0287, mse:2.3276, rmse:1.5257, smape:79.8408
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3843) from 3843
+3843 new ds
+256 146
+train 3843
+Data aug...
+0 146
+val 518
+Data aug...
+0 146
+test 1190
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 3.0420584678649902
+Epoch: 1, Steps: 240 | Train Loss: 0.2059867 Vali Loss: 0.2883958
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.288396).  Saving model ...
+Epoch: 2 cost time: 3.2206156253814697
+Epoch: 2, Steps: 240 | Train Loss: 0.1692417 Vali Loss: 0.3155453
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+EarlyStopping counter: 1 out of 3
+Epoch: 3 cost time: 3.1204633712768555
+Epoch: 3, Steps: 240 | Train Loss: 0.1555469 Vali Loss: 0.2595044
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.288396 --> 0.259504).  Saving model ...
+Epoch: 4 cost time: 3.255741834640503
+Epoch: 4, Steps: 240 | Train Loss: 0.1510380 Vali Loss: 0.3019820
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 2.9366042613983154
+Epoch: 5, Steps: 240 | Train Loss: 0.1438829 Vali Loss: 0.2944367
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 6 cost time: 2.6878135204315186
+Epoch: 6, Steps: 240 | Train Loss: 0.1322780 Vali Loss: 0.2634374
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+test shape: (74, 16, 24, 1) (74, 16, 24, 1)
+test shape: (1184, 24, 1) (1184, 24, 1)
+mae:1.0251, mse:2.3095, rmse:1.5197, smape:79.9501
+mse_mean = 2.2658, mse_std = 0.0750
+mae_mean = 1.0132, mae_std = 0.0195
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3759) from 3759
+3759 new ds
+256 158
+train 3759
+Data aug...
+0 158
+val 434
+Data aug...
+0 158
+test 1106
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 3.6553990840911865
+Epoch: 1, Steps: 234 | Train Loss: 0.2216059 Vali Loss: 0.3258252
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.325825).  Saving model ...
+Epoch: 2 cost time: 3.35884165763855
+Epoch: 2, Steps: 234 | Train Loss: 0.1820847 Vali Loss: 0.2643476
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.325825 --> 0.264348).  Saving model ...
+Epoch: 3 cost time: 3.063479423522949
+Epoch: 3, Steps: 234 | Train Loss: 0.1658386 Vali Loss: 0.2478415
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.264348 --> 0.247841).  Saving model ...
+Epoch: 4 cost time: 3.2346596717834473
+Epoch: 4, Steps: 234 | Train Loss: 0.1637672 Vali Loss: 0.2555911
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 3.6014678478240967
+Epoch: 5, Steps: 234 | Train Loss: 0.1612817 Vali Loss: 0.2464919
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+Validation loss decreased (0.247841 --> 0.246492).  Saving model ...
+Epoch: 6 cost time: 2.7440035343170166
+Epoch: 6, Steps: 234 | Train Loss: 0.1553360 Vali Loss: 0.2372556
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+Validation loss decreased (0.246492 --> 0.237256).  Saving model ...
+Epoch: 7 cost time: 3.636483669281006
+Epoch: 7, Steps: 234 | Train Loss: 0.1402848 Vali Loss: 0.2651295
+lr_adjust = {7: 6.561e-05}
+Updating learning rate to 6.561e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 8 cost time: 3.1861047744750977
+Epoch: 8, Steps: 234 | Train Loss: 0.1377445 Vali Loss: 0.2572697
+lr_adjust = {8: 5.904900000000001e-05}
+Updating learning rate to 5.904900000000001e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 9 cost time: 3.75309157371521
+Epoch: 9, Steps: 234 | Train Loss: 0.1334457 Vali Loss: 0.2469026
+lr_adjust = {9: 5.3144100000000005e-05}
+Updating learning rate to 5.3144100000000005e-05
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+test shape: (69, 16, 36, 1) (69, 16, 36, 1)
+test shape: (1104, 36, 1) (1104, 36, 1)
+mae:1.0278, mse:2.2494, rmse:1.4998, smape:80.7148
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3759) from 3759
+3759 new ds
+256 158
+train 3759
+Data aug...
+0 158
+val 434
+Data aug...
+0 158
+test 1106
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 3.4360151290893555
+Epoch: 1, Steps: 234 | Train Loss: 0.2325713 Vali Loss: 0.2783849
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.278385).  Saving model ...
+Epoch: 2 cost time: 4.275280952453613
+Epoch: 2, Steps: 234 | Train Loss: 0.1926637 Vali Loss: 0.2780275
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.278385 --> 0.278028).  Saving model ...
+Epoch: 3 cost time: 3.4157729148864746
+Epoch: 3, Steps: 234 | Train Loss: 0.1701950 Vali Loss: 0.2720858
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.278028 --> 0.272086).  Saving model ...
+Epoch: 4 cost time: 3.4170498847961426
+Epoch: 4, Steps: 234 | Train Loss: 0.1610498 Vali Loss: 0.3008112
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 3.3073854446411133
+Epoch: 5, Steps: 234 | Train Loss: 0.1537567 Vali Loss: 0.2672966
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+Validation loss decreased (0.272086 --> 0.267297).  Saving model ...
+Epoch: 6 cost time: 4.115169286727905
+Epoch: 6, Steps: 234 | Train Loss: 0.1557404 Vali Loss: 0.2721052
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 7 cost time: 3.012524127960205
+Epoch: 7, Steps: 234 | Train Loss: 0.1492951 Vali Loss: 0.2581471
+lr_adjust = {7: 6.561e-05}
+Updating learning rate to 6.561e-05
+Validation loss decreased (0.267297 --> 0.258147).  Saving model ...
+Epoch: 8 cost time: 3.1932919025421143
+Epoch: 8, Steps: 234 | Train Loss: 0.1518295 Vali Loss: 0.2464665
+lr_adjust = {8: 5.904900000000001e-05}
+Updating learning rate to 5.904900000000001e-05
+Validation loss decreased (0.258147 --> 0.246467).  Saving model ...
+Epoch: 9 cost time: 3.648358106613159
+Epoch: 9, Steps: 234 | Train Loss: 0.1504288 Vali Loss: 0.2790553
+lr_adjust = {9: 5.3144100000000005e-05}
+Updating learning rate to 5.3144100000000005e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 10 cost time: 3.4692249298095703
+Epoch: 10, Steps: 234 | Train Loss: 0.1442566 Vali Loss: 0.2451342
+lr_adjust = {10: 4.782969000000001e-05}
+Updating learning rate to 4.782969000000001e-05
+Validation loss decreased (0.246467 --> 0.245134).  Saving model ...
+------------------------------------
+test shape: (69, 16, 36, 1) (69, 16, 36, 1)
+test shape: (1104, 36, 1) (1104, 36, 1)
+mae:1.0066, mse:2.2037, rmse:1.4845, smape:79.1196
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3759) from 3759
+3759 new ds
+256 158
+train 3759
+Data aug...
+0 158
+val 434
+Data aug...
+0 158
+test 1106
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 2.7447221279144287
+Epoch: 1, Steps: 234 | Train Loss: 0.2016893 Vali Loss: 0.3723563
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.372356).  Saving model ...
+Epoch: 2 cost time: 3.4175407886505127
+Epoch: 2, Steps: 234 | Train Loss: 0.1717870 Vali Loss: 0.2616705
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.372356 --> 0.261671).  Saving model ...
+Epoch: 3 cost time: 3.706360340118408
+Epoch: 3, Steps: 234 | Train Loss: 0.1634246 Vali Loss: 0.2531161
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.261671 --> 0.253116).  Saving model ...
+Epoch: 4 cost time: 3.7503702640533447
+Epoch: 4, Steps: 234 | Train Loss: 0.1461363 Vali Loss: 0.2598445
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 2.893289089202881
+Epoch: 5, Steps: 234 | Train Loss: 0.1387338 Vali Loss: 0.2651713
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 6 cost time: 3.3998820781707764
+Epoch: 6, Steps: 234 | Train Loss: 0.1300701 Vali Loss: 0.2699588
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+test shape: (69, 16, 36, 1) (69, 16, 36, 1)
+test shape: (1104, 36, 1) (1104, 36, 1)
+mae:1.0323, mse:2.2770, rmse:1.5090, smape:80.9979
+mse_mean = 2.2434, mse_std = 0.0303
+mae_mean = 1.0222, mae_std = 0.0112
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3675) from 3675
+3675 new ds
+256 170
+train 3675
+Data aug...
+0 170
+val 350
+Data aug...
+0 170
+test 1022
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 3.6000139713287354
+Epoch: 1, Steps: 229 | Train Loss: 0.2166504 Vali Loss: 0.2639645
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.263965).  Saving model ...
+Epoch: 2 cost time: 2.1891043186187744
+Epoch: 2, Steps: 229 | Train Loss: 0.1736635 Vali Loss: 0.2841293
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+EarlyStopping counter: 1 out of 3
+Epoch: 3 cost time: 2.7170188426971436
+Epoch: 3, Steps: 229 | Train Loss: 0.1642160 Vali Loss: 0.2526886
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.263965 --> 0.252689).  Saving model ...
+Epoch: 4 cost time: 2.3049769401550293
+Epoch: 4, Steps: 229 | Train Loss: 0.1610995 Vali Loss: 0.2722356
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 2.348240613937378
+Epoch: 5, Steps: 229 | Train Loss: 0.1562504 Vali Loss: 0.2451495
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+Validation loss decreased (0.252689 --> 0.245150).  Saving model ...
+Epoch: 6 cost time: 2.8554775714874268
+Epoch: 6, Steps: 229 | Train Loss: 0.1453043 Vali Loss: 0.2541789
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 7 cost time: 3.1766538619995117
+Epoch: 7, Steps: 229 | Train Loss: 0.1393351 Vali Loss: 0.2565364
+lr_adjust = {7: 6.561e-05}
+Updating learning rate to 6.561e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 8 cost time: 2.592609167098999
+Epoch: 8, Steps: 229 | Train Loss: 0.1436706 Vali Loss: 0.2724738
+lr_adjust = {8: 5.904900000000001e-05}
+Updating learning rate to 5.904900000000001e-05
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+test shape: (63, 16, 48, 1) (63, 16, 48, 1)
+test shape: (1008, 48, 1) (1008, 48, 1)
+mae:1.0904, mse:2.5314, rmse:1.5910, smape:85.0391
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3675) from 3675
+3675 new ds
+256 170
+train 3675
+Data aug...
+0 170
+val 350
+Data aug...
+0 170
+test 1022
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 2.33128023147583
+Epoch: 1, Steps: 229 | Train Loss: 0.2113049 Vali Loss: 0.2989810
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.298981).  Saving model ...
+Epoch: 2 cost time: 3.561475992202759
+Epoch: 2, Steps: 229 | Train Loss: 0.1885879 Vali Loss: 0.2382478
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.298981 --> 0.238248).  Saving model ...
+Epoch: 3 cost time: 3.2008790969848633
+Epoch: 3, Steps: 229 | Train Loss: 0.1725034 Vali Loss: 0.2366481
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.238248 --> 0.236648).  Saving model ...
+Epoch: 4 cost time: 2.8340799808502197
+Epoch: 4, Steps: 229 | Train Loss: 0.1601128 Vali Loss: 0.2459253
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 3.289520502090454
+Epoch: 5, Steps: 229 | Train Loss: 0.1527420 Vali Loss: 0.2734614
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 6 cost time: 3.389554500579834
+Epoch: 6, Steps: 229 | Train Loss: 0.1525103 Vali Loss: 0.2322687
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+Validation loss decreased (0.236648 --> 0.232269).  Saving model ...
+Epoch: 7 cost time: 3.195690155029297
+Epoch: 7, Steps: 229 | Train Loss: 0.1429902 Vali Loss: 0.2357466
+lr_adjust = {7: 6.561e-05}
+Updating learning rate to 6.561e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 8 cost time: 3.3697757720947266
+Epoch: 8, Steps: 229 | Train Loss: 0.1449964 Vali Loss: 0.2406456
+lr_adjust = {8: 5.904900000000001e-05}
+Updating learning rate to 5.904900000000001e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 9 cost time: 2.7633724212646484
+Epoch: 9, Steps: 229 | Train Loss: 0.1354580 Vali Loss: 0.2472311
+lr_adjust = {9: 5.3144100000000005e-05}
+Updating learning rate to 5.3144100000000005e-05
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+test shape: (63, 16, 48, 1) (63, 16, 48, 1)
+test shape: (1008, 48, 1) (1008, 48, 1)
+mae:1.0840, mse:2.5345, rmse:1.5920, smape:83.6542
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3675) from 3675
+3675 new ds
+256 170
+train 3675
+Data aug...
+0 170
+val 350
+Data aug...
+0 170
+test 1022
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 3.026447057723999
+Epoch: 1, Steps: 229 | Train Loss: 0.1910872 Vali Loss: 0.2544689
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.254469).  Saving model ...
+Epoch: 2 cost time: 3.2378735542297363
+Epoch: 2, Steps: 229 | Train Loss: 0.1501316 Vali Loss: 0.2601619
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+EarlyStopping counter: 1 out of 3
+Epoch: 3 cost time: 3.14573335647583
+Epoch: 3, Steps: 229 | Train Loss: 0.1459894 Vali Loss: 0.2518427
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.254469 --> 0.251843).  Saving model ...
+Epoch: 4 cost time: 2.428510904312134
+Epoch: 4, Steps: 229 | Train Loss: 0.1356889 Vali Loss: 0.2817874
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 3.015719175338745
+Epoch: 5, Steps: 229 | Train Loss: 0.1296261 Vali Loss: 0.2685406
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 6 cost time: 2.583350896835327
+Epoch: 6, Steps: 229 | Train Loss: 0.1337889 Vali Loss: 0.2238005
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+Validation loss decreased (0.251843 --> 0.223800).  Saving model ...
+Epoch: 7 cost time: 3.1563374996185303
+Epoch: 7, Steps: 229 | Train Loss: 0.1232145 Vali Loss: 0.2366480
+lr_adjust = {7: 6.561e-05}
+Updating learning rate to 6.561e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 8 cost time: 3.0306437015533447
+Epoch: 8, Steps: 229 | Train Loss: 0.1177758 Vali Loss: 0.2468954
+lr_adjust = {8: 5.904900000000001e-05}
+Updating learning rate to 5.904900000000001e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 9 cost time: 2.9787464141845703
+Epoch: 9, Steps: 229 | Train Loss: 0.1222491 Vali Loss: 0.2370512
+lr_adjust = {9: 5.3144100000000005e-05}
+Updating learning rate to 5.3144100000000005e-05
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+test shape: (63, 16, 48, 1) (63, 16, 48, 1)
+test shape: (1008, 48, 1) (1008, 48, 1)
+mae:1.0084, mse:2.2101, rmse:1.4867, smape:79.1736
+mse_mean = 2.4254, mse_std = 0.1522
+mae_mean = 1.0609, mae_std = 0.0372
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3591) from 3591
+3591 new ds
+256 182
+train 3591
+Data aug...
+0 182
+val 266
+Data aug...
+0 182
+test 938
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 3.18572735786438
+Epoch: 1, Steps: 224 | Train Loss: 0.2203720 Vali Loss: 0.3096954
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.309695).  Saving model ...
+Epoch: 2 cost time: 3.0536301136016846
+Epoch: 2, Steps: 224 | Train Loss: 0.1702919 Vali Loss: 0.2827635
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.309695 --> 0.282764).  Saving model ...
+Epoch: 3 cost time: 2.815469264984131
+Epoch: 3, Steps: 224 | Train Loss: 0.1642623 Vali Loss: 0.2794942
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.282764 --> 0.279494).  Saving model ...
+Epoch: 4 cost time: 2.9946281909942627
+Epoch: 4, Steps: 224 | Train Loss: 0.1607245 Vali Loss: 0.2633320
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+Validation loss decreased (0.279494 --> 0.263332).  Saving model ...
+Epoch: 5 cost time: 3.114288330078125
+Epoch: 5, Steps: 224 | Train Loss: 0.1517250 Vali Loss: 0.3276950
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 6 cost time: 2.8178470134735107
+Epoch: 6, Steps: 224 | Train Loss: 0.1449931 Vali Loss: 0.2482710
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+Validation loss decreased (0.263332 --> 0.248271).  Saving model ...
+Epoch: 7 cost time: 2.6808066368103027
+Epoch: 7, Steps: 224 | Train Loss: 0.1306269 Vali Loss: 0.2523567
+lr_adjust = {7: 6.561e-05}
+Updating learning rate to 6.561e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 8 cost time: 2.972726345062256
+Epoch: 8, Steps: 224 | Train Loss: 0.1349172 Vali Loss: 0.2276260
+lr_adjust = {8: 5.904900000000001e-05}
+Updating learning rate to 5.904900000000001e-05
+Validation loss decreased (0.248271 --> 0.227626).  Saving model ...
+Epoch: 9 cost time: 2.5362186431884766
+Epoch: 9, Steps: 224 | Train Loss: 0.1285156 Vali Loss: 0.2666683
+lr_adjust = {9: 5.3144100000000005e-05}
+Updating learning rate to 5.3144100000000005e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 10 cost time: 2.8186604976654053
+Epoch: 10, Steps: 224 | Train Loss: 0.1279465 Vali Loss: 0.2280899
+lr_adjust = {10: 4.782969000000001e-05}
+Updating learning rate to 4.782969000000001e-05
+EarlyStopping counter: 2 out of 3
+------------------------------------
+test shape: (58, 16, 60, 1) (58, 16, 60, 1)
+test shape: (928, 60, 1) (928, 60, 1)
+mae:1.0804, mse:2.4001, rmse:1.5492, smape:83.7111
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3591) from 3591
+3591 new ds
+256 182
+train 3591
+Data aug...
+0 182
+val 266
+Data aug...
+0 182
+test 938
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 2.6899333000183105
+Epoch: 1, Steps: 224 | Train Loss: 0.2271264 Vali Loss: 0.3340898
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.334090).  Saving model ...
+Epoch: 2 cost time: 2.6212992668151855
+Epoch: 2, Steps: 224 | Train Loss: 0.1796230 Vali Loss: 0.3879966
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+EarlyStopping counter: 1 out of 3
+Epoch: 3 cost time: 3.215022087097168
+Epoch: 3, Steps: 224 | Train Loss: 0.1723570 Vali Loss: 0.2464228
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.334090 --> 0.246423).  Saving model ...
+Epoch: 4 cost time: 2.8331239223480225
+Epoch: 4, Steps: 224 | Train Loss: 0.1613547 Vali Loss: 0.2821356
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 2.819263219833374
+Epoch: 5, Steps: 224 | Train Loss: 0.1651721 Vali Loss: 0.2399101
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+Validation loss decreased (0.246423 --> 0.239910).  Saving model ...
+Epoch: 6 cost time: 2.539982318878174
+Epoch: 6, Steps: 224 | Train Loss: 0.1558211 Vali Loss: 0.2612550
+lr_adjust = {6: 7.290000000000001e-05}
+Updating learning rate to 7.290000000000001e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 7 cost time: 3.615154504776001
+Epoch: 7, Steps: 224 | Train Loss: 0.1432153 Vali Loss: 0.2158607
+lr_adjust = {7: 6.561e-05}
+Updating learning rate to 6.561e-05
+Validation loss decreased (0.239910 --> 0.215861).  Saving model ...
+Epoch: 8 cost time: 3.2227561473846436
+Epoch: 8, Steps: 224 | Train Loss: 0.1408789 Vali Loss: 0.2416614
+lr_adjust = {8: 5.904900000000001e-05}
+Updating learning rate to 5.904900000000001e-05
+EarlyStopping counter: 1 out of 3
+Epoch: 9 cost time: 3.091923952102661
+Epoch: 9, Steps: 224 | Train Loss: 0.1417378 Vali Loss: 0.2651889
+lr_adjust = {9: 5.3144100000000005e-05}
+Updating learning rate to 5.3144100000000005e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 10 cost time: 2.9455058574676514
+Epoch: 10, Steps: 224 | Train Loss: 0.1397747 Vali Loss: 0.2525976
+lr_adjust = {10: 4.782969000000001e-05}
+Updating learning rate to 4.782969000000001e-05
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+test shape: (58, 16, 60, 1) (58, 16, 60, 1)
+test shape: (928, 60, 1) (928, 60, 1)
+mae:1.1091, mse:2.4858, rmse:1.5767, smape:84.7733
+Data aug...
+7 aug DS found.
+Shape should be: (70000, 256)
+(70000, 256) aug data
+sample -100 % (3591) from 3591
+3591 new ds
+256 182
+train 3591
+Data aug...
+0 182
+val 266
+Data aug...
+0 182
+test 938
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2SdpaAttention(
+        (c_attn): Conv1D(nf=2304, nx=768)
+        (c_proj): Conv1D(nf=768, nx=768)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D(nf=3072, nx=768)
+        (c_proj): Conv1D(nf=768, nx=3072)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Epoch: 1 cost time: 2.988325357437134
+Epoch: 1, Steps: 224 | Train Loss: 0.2006491 Vali Loss: 0.2559113
+lr_adjust = {1: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (inf --> 0.255911).  Saving model ...
+Epoch: 2 cost time: 2.7786037921905518
+Epoch: 2, Steps: 224 | Train Loss: 0.1597701 Vali Loss: 0.2254246
+lr_adjust = {2: 0.0001}
+Updating learning rate to 0.0001
+Validation loss decreased (0.255911 --> 0.225425).  Saving model ...
+Epoch: 3 cost time: 3.0778708457946777
+Epoch: 3, Steps: 224 | Train Loss: 0.1508752 Vali Loss: 0.2290588
+lr_adjust = {3: 0.0001}
+Updating learning rate to 0.0001
+EarlyStopping counter: 1 out of 3
+Epoch: 4 cost time: 2.8751072883605957
+Epoch: 4, Steps: 224 | Train Loss: 0.1468209 Vali Loss: 0.2301253
+lr_adjust = {4: 9e-05}
+Updating learning rate to 9e-05
+EarlyStopping counter: 2 out of 3
+Epoch: 5 cost time: 2.939857006072998
+Epoch: 5, Steps: 224 | Train Loss: 0.1342042 Vali Loss: 0.2445909
+lr_adjust = {5: 8.1e-05}
+Updating learning rate to 8.1e-05
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+test shape: (58, 16, 60, 1) (58, 16, 60, 1)
+test shape: (928, 60, 1) (928, 60, 1)
+mae:1.1549, mse:2.5734, rmse:1.6042, smape:89.3754
+mse_mean = 2.4864, mse_std = 0.0708
+mae_mean = 1.1148, mae_std = 0.0307
