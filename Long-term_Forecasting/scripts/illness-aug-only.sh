@@ -12,7 +12,7 @@ do
 python main.py \
     --root_path ./datasets/illness/ \
     --data_path national_illness.csv \
-    --model_id illness_$model'_'$gpt_layer'_'$seq_len'_'$pred_len'_'$percent'_aug-only' \
+    --model_id illness_$model'_'$gpt_layer'_'$seq_len'_'$pred_len'_'$percent'_aug-only-chronos' \
     --data custom \
     --seq_len $seq_len \
     --label_len 18 \
@@ -32,7 +32,7 @@ python main.py \
     --itr 3 \
     --model $model \
     --is_gpt 1 \
-    --aug ili-clo-0_256_gen_100repeat.npy \
+    --aug kernelsynth.npy \
     --percent_aug 10 \
     --aug_only 1
 done

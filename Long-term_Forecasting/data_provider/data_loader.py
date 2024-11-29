@@ -304,7 +304,7 @@ class Dataset_Custom(Dataset):
         self.ds_len = (len(self.data_x) - self.seq_len - self.pred_len + 1) * self.data_x.shape[-1]
         # data aug stuff
         if self.aug_path and self.set_type == 0:
-            self.augs = [np.load(aug_path).squeeze() for aug_path in glob.glob(self.aug_path.replace('-0', '-*'))]
+            self.augs = [np.load(aug_path, allow_pickle=True).squeeze() for aug_path in glob.glob(self.aug_path.replace('-0', '-*'))]
             print(len(self.augs), 'aug DS found.')
             history_dict = {i: [] for i, _ in enumerate(self.augs)}
             history_len = self.augs[0].shape[-1]

@@ -1,4 +1,4 @@
-model_name=GPT4TS-BRIDGE
+model_name=GPT4TS
 for percent_aug in 100; do # 
   python -u run.py \
     --task_name short_term_forecast \
@@ -22,7 +22,7 @@ for percent_aug in 100; do #
     --itr 1 \
     --learning_rate 0.002 \
     --loss 'SMAPE' \
-    --aug m4-Monthly-train_168_gen_50ksteps_10k.npy \
+    --aug kernelsynth.npy \
     --percent_aug $percent_aug \
     --aug_only 1
 
@@ -49,7 +49,7 @@ for percent_aug in 100; do #
     --itr 1 \
     --learning_rate 0.001 \
     --loss 'SMAPE' \
-    --aug m4-Yearly-train_168_gen_50ksteps_10k.npy \
+    --aug kernelsynth.npy \
     --percent_aug $percent_aug \
     --aug_only 1
 
@@ -75,7 +75,7 @@ for percent_aug in 100; do #
     --itr 1 \
     --learning_rate 0.001 \
     --loss 'SMAPE' \
-    --aug m4-Quarterly-train_168_gen_50ksteps_10k.npy \
+    --aug kernelsynth.npy \
     --percent_aug $percent_aug \
     --aug_only 1
 
@@ -102,7 +102,7 @@ for percent_aug in 100; do #
     --itr 1 \
     --learning_rate 0.001 \
     --loss 'SMAPE' \
-    --aug m4-Daily-train_168_gen_50ksteps_10k.npy \
+    --aug kernelsynth.npy \
     --percent_aug $percent_aug \
     --aug_only 1
 
@@ -130,7 +130,7 @@ for percent_aug in 100; do #
     --itr 1 \
     --learning_rate 0.001 \
     --loss 'SMAPE' \
-    --aug m4-Weekly-train_168_gen_50ksteps_10k.npy \
+    --aug kernelsynth.npy \
     --percent_aug $percent_aug \
     --aug_only 1
 
@@ -157,7 +157,7 @@ for percent_aug in 100; do #
     --itr 1 \
     --learning_rate 0.001 \
     --loss 'SMAPE' \
-    --aug m4-Hourly-train_168_gen_50ksteps_10k.npy \
+    --aug kernelsynth.npy \
     --percent_aug $percent_aug \
     --aug_only 1
 

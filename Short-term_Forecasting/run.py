@@ -182,5 +182,5 @@ else:
 
     exp = Exp(args)  # set experiments
     print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
-    # exp.test(setting, test=1)
+    exp.test(setting, test=1)
     torch.cuda.empty_cache()
